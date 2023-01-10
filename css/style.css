@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+/* font */
+ --font1:'Montserrat', sans-serif;
+ --font2:'Fraunces', serif;
+ /* color */
+ --Dark-cyan: hsl(158, 36%, 37%);
+ --darker-cyan: hsl(158, 36%, 17%);
+ --Cream: hsl(30, 38%, 92%);
+
+ --Very-dark-blue: hsl(212, 21%, 14%);
+ --Dark-grayish-blue: hsl(228, 12%, 48%);
+ --White: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    background-color:var(--Cream);
+    overflow: hidden;
+    position: relative;
+}
+.card{
+   margin: auto;
+   width: 37.78%; /*544*/
+   max-width: 544px;
+   min-width: 544px;
+   background-color:var(--White);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   border-radius: 20px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   overflow: hidden;
+}
+.item{
+    width: 50%;
+}
+.img{
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.content{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font1); 
+    font-size: 13px;
+}
+.content>p{
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+.content h1{
+    font-family: var(--font2);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.content h2{
+    font-family: var(--font2);
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    margin: 30px 0;
+}
+.content h2>span{
+    font-family: var(--font1); 
+    font-weight: 500;
+    font-size: 13px;
+    text-decoration: line-through;
+    text-decoration-color: var(--Dark-grayish-blue);
+    margin-left: 18px;
+    color: var(--Dark-grayish-blue);
+}
+button{
+    width: 100%;
+    padding: 5.39% 20%;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: var(--White);
+    font-family:var(--font1); 
+    border-radius: 10px;
+    cursor: pointer;
+}
+button>img{
+    margin-right: 10px;
+}
+button:hover{
+    background-color: #1a4031;
+    transition: 0.3s;
+}
+
+@media screen and (max-width:560px) {
+    .card{
+        width: 345px;
+        max-width: 345px;
+        min-width: 345px;
+        flex-direction: column;
+    }
+    .item{
+        width: 100%;
+    }
+    .img{
+        width: 100%;
+        padding: 50%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px ;
+    }
+    @media screen and (max-width:375px) {
+        .card{
+            width: 80%;
+            min-width: 0;
+        }
+        .content>br{
+            display: none;
+        }
+    }
+}
+
